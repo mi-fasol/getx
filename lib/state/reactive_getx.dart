@@ -14,12 +14,12 @@ class ReactiveGetX extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         GetBuilder<ReactiveController>(builder: (controller) {
-          return Text(
-            "${controller.count}",
-            style: const TextStyle(
-              fontSize: 50,
-            ),
-          );
+          return Obx(() => Text(
+                "${controller.count}",
+                style: const TextStyle(
+                  fontSize: 50,
+                ),
+              ));
         }),
         ElevatedButton(
             onPressed: controller.increase,
