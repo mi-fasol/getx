@@ -5,4 +5,8 @@ class ReactiveController extends GetxController {
   void increase() {
     count++;
   }
+
+  void makeIt() {
+    count(0);
+  }
 }

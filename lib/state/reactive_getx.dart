@@ -8,21 +8,32 @@ class ReactiveGetX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(ReactiveController());
-
     return Center(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Obx(() => Text(
-              "${controller.count}",
+              "${controller.count.value}",
               style: const TextStyle(
                 fontSize: 50,
               ),
             )),
         ElevatedButton(
-            onPressed: controller.increase,
+            onPressed: () {
+              controller.increase();
+            },
             child: const Text(
               "+",
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            )),
+        ElevatedButton(
+            onPressed: () {
+              controller.makeIt();
+            },
+            child: const Text(
+              "make it 0",
               style: TextStyle(
                 fontSize: 30,
               ),
