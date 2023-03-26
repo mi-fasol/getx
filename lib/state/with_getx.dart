@@ -11,26 +11,25 @@ class WithGetX extends StatelessWidget {
 
     return Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GetBuilder<IncreaseController>(builder: (controller) {
-              return Text(
-                "${controller.count}",
-                style: const TextStyle(
-                  fontSize: 50,
-                ),
-              );
-            }),
-            ElevatedButton(
-                onPressed:
-                controller.increase,
-                child: const Text(
-                  "+",
-                  style: TextStyle(
-                    fontSize: 30,
-                  ),
-                ))
-          ],
-        ));
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        GetBuilder<IncreaseController>(builder: (controller) {
+          return Text(
+            "${controller.count}",
+            style: const TextStyle(
+              fontSize: 50,
+            ),
+          );
+        }),
+        ElevatedButton(
+            onPressed: controller.increase,
+            child: const Text(
+              "+",
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ))
+      ],
+    ));
   }
 }
