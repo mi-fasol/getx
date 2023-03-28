@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:getx/page/dependency_manage_page.dart';
 import 'package:getx/state/reactive_getx.dart';
 import 'package:getx/state/with_getx.dart';
 
@@ -41,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Expanded(
-              child: ReactiveGetX(),
+              child: DependencyManagePage(),
             )
           ],
         ),
